@@ -1,0 +1,10 @@
+api_generator:
+    all: 
+        create: true
+        update: true
+        delete: true
+        get_one: true
+        get_one_deep: true
+        get_all: true
+        get_all_deep: true
+            

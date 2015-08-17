@@ -1,0 +1,54 @@
+imports:
+    - { resource: config.yml }
+
+framework:
+    router:
+        resource: "%kernel.root_dir%/config/routing_dev.yml"
+        strict_requirements: true
+    profiler: { only_exceptions: false }
+
+web_profiler:
+    toolbar: "%debug_toolbar%"
+    intercept_redirects: "%debug_redirects%"
+
+monolog:
+    handlers:
+        main:
+            type:   stream
+            path:   "%kernel.logs_dir%/%kernel.environment%.log"
+            level:  debug
+        console:
+            type:   console
+            bubble: false
+        # uncomment to get logging in your browser
+        # you may have to allow bigger header sizes in your Web server configuration
+        #firephp:
+        #    type:   firephp
+        #    level:  info
+        #chromephp:
+        #    type:   chromephp
+        #    level:  info
+
+parameters:
+    assetic.filter.compass.images_dir: %kernel.root_dir%/../web/img
+    assetic.filter.compass.http_path:  /img
+
+# Assetic Configuration
+assetic:
+    debug:          %kernel.debug%
+    use_controller: "%use_assetic_controller%"
+    bundles:        [  ]
+    #java: /usr/bin/java
+    filters:
+        cssrewrite: ~
+        sass:
+            bin: /usr/local/bin/sass
+        compass:
+            bin: /usr/local/bin/compass
+            apply_to: "\.scss$"
+        less:
+            node: /usr/bin/node
+            node_paths: [/usr/lib/node_modules]
+            apply_to: "\.less$"
+#swiftmailer:
+#    delivery_address: me@example.com

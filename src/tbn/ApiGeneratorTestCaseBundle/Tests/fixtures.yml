@@ -1,0 +1,21 @@
+tbn\ApiGeneratorTestCaseBundle\Entity\TcReference:
+    TcReference1:
+        id: 1
+        name: <username()>
+    TcReference{2..20}:
+        name: <username()>
+tbn\ApiGeneratorTestCaseBundle\Entity\TcManyReference:
+    TcManyReference1:
+        id: 1
+        name: <username()>
+tbn\ApiGeneratorTestCaseBundle\Entity\TcOneReference:
+    TcOneReference1:
+        id: 1
+        name: <username()>
+        tcReference: @TcReference1
+        tcManyReference: @TcManyReference1    
+    TcOneReference1{2..10}:
+        name: <username()>
+        tcReference: @TcReference1
+        tcManyReference: @TcManyReference1    
+        
