@@ -1,0 +1,15 @@
+/.buildpath
+/.project
+/.settings
+/app/cache/
+/app/logs/
+/vendor
+/.gitignore~
+/bin
+/web/bundles
+/app/config/parameters.yml
+/web/js
+/web/css
+
+/composer.phar
+
