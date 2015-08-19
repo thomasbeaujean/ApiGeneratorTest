@@ -119,15 +119,15 @@ class ApiControllerTest extends TestCase
 
         $response = $client->getResponse();
         $content = $client->getResponse()->getContent();
-
         $this->assertEquals(200, $response->getStatusCode(), $content);
 
         $data = json_decode($content, true);
         $dataNumber = count($data['data']);
 
+        //check that the new entry is sent back
         $this->assertEquals(1, $dataNumber);
 
-        //
+        //check that there is 20+1 items, it did create a new entry
         $this->assertGetAll($itemNamespace, 21);
 
         $id = $data['data'][0]['id'];
@@ -149,8 +149,14 @@ class ApiControllerTest extends TestCase
         $data = json_decode($content, true);
         $dataNumber = count($data['data']);
 
-        //
+        //check that there is 20+1 items, update did not create a new entry
         $this->assertGetAll($itemNamespace, 21);
-    }
 
+        //test delete
+        $url = $router->generate('api_generator_delete', array('itemNamespace' => $itemNamespace, 'id' => $id));
+        $client->request('DELETE', $url, $parameters);
+        $this->assertEquals(200, $response->getStatusCode(), $content);
+
+        $this->assertGetAll($itemNamespace, 20);
+    }
 }

@@ -29,7 +29,8 @@
         "tbn/doctrinerelationvisualizer-bundle": "dev-master",
         "twbs/bootstrap": "^3.3",
         "nelmio/alice": "^2.0",
-        "doctrine/doctrine-fixtures-bundle": "^2.2"
+        "doctrine/doctrine-fixtures-bundle": "^2.2",
+        "tbn/apigenerator-bundle": "dev-master"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"

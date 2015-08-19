@@ -2,10 +2,7 @@
 
 namespace tbn\ApiGeneratorTestCaseBundle\Tests\Services;
 
-include '/var/www/zdebug/zdebug.php';
-
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-
 use tbn\ApiGeneratorBundle\Services\AuthorizationService;
 use tbn\ApiGeneratorBundle\Services\ApiService;
 use tbn\ApiGeneratorTestCaseBundle\Tests\TestCase;

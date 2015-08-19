@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "cc7ffb049580645549985319aebda258",
+    "hash": "ae626badf4e6f290832202412f119924",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -2421,6 +2421,34 @@
             "time": "2015-07-26 10:44:22"
         },
         {
+            "name": "tbn/apigenerator-bundle",
+            "version": "dev-master",
+            "target-dir": "tbn/ApiGeneratorBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thomasbeaujean/ApiGenerator.git",
+                "reference": "61b3d7023631eefc4d14a763854109d5e41dabc0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thomasbeaujean/ApiGenerator/zipball/61b3d7023631eefc4d14a763854109d5e41dabc0",
+                "reference": "61b3d7023631eefc4d14a763854109d5e41dabc0",
+                "shasum": ""
+            },
+            "require": {
+                "tbn/getsetforeignnormalizer-bundle": ">=2.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "tbn\\ApiGeneratorBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Get an ajax crud api out of the box",
+            "time": "2015-08-19 06:42:22"
+        },
+        {
             "name": "tbn/doctrinerelationvisualizer-bundle",
             "version": "dev-master",
             "target-dir": "tbn/DoctrineRelationVisualizerBundle",
@@ -2458,12 +2486,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thomasbeaujean/GetSetForeignNormalizerBundle.git",
-                "reference": "0d82c5a3488cbc7d8cfbee9aae598f2a7c811446"
+                "reference": "e4104e88826c1cfe5cb0d6681dd7604377c6aabd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thomasbeaujean/GetSetForeignNormalizerBundle/zipball/0d82c5a3488cbc7d8cfbee9aae598f2a7c811446",
-                "reference": "0d82c5a3488cbc7d8cfbee9aae598f2a7c811446",
+                "url": "https://api.github.com/repos/thomasbeaujean/GetSetForeignNormalizerBundle/zipball/e4104e88826c1cfe5cb0d6681dd7604377c6aabd",
+                "reference": "e4104e88826c1cfe5cb0d6681dd7604377c6aabd",
                 "shasum": ""
             },
             "require-dev": {
@@ -2477,7 +2505,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "add the getsetforeignnormalizer service",
-            "time": "2015-08-14 16:19:35"
+            "time": "2015-08-17 21:14:48"
         },
         {
             "name": "tbn/json-annotation-bundle",
@@ -2808,7 +2836,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "tbn/getsetforeignnormalizer-bundle": 20,
-        "tbn/doctrinerelationvisualizer-bundle": 20
+        "tbn/doctrinerelationvisualizer-bundle": 20,
+        "tbn/apigenerator-bundle": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
