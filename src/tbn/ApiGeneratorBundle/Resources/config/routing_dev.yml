@@ -1,4 +1,0 @@
-tbn_api_generator_dev:
-    resource: "@ApiGeneratorBundle/Controller/ConfigurationController.php"
-    type:     annotation
-    prefix:   /
